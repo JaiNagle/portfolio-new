@@ -32,6 +32,11 @@ const Hero = () => {
             </div>
           </div>
 
+          {/* TEMP */}
+          <h3 className="md:text-5xl font-bold animate-text-shimmer">
+            Work-in-progress.
+          </h3>
+
           {/* Tagline */}
           <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
             Crafting intelligent solutions with Python, Machine Learning, and
