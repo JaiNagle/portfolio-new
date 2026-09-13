@@ -22,6 +22,11 @@ const Projects = () => {
                 <span className="ml-3 font-mono text-xs text-slate">
                   ~/projects/{project.slug}
                 </span>
+                {project.status && (
+                  <span className="ml-auto font-mono text-xs text-signal">
+                    [{project.status.toLowerCase()}]
+                  </span>
+                )}
               </div>
 
               <div className="p-6 md:p-10 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">

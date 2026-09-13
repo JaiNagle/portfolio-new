@@ -55,26 +55,90 @@ export type Project = {
   description: string;
   stack: string[];
   features: string[];
+  status?: string;
   github?: string;
   demo?: string;
 };
 
 export const projects: Project[] = [
   {
+    slug: "saferoute",
+    title: "SafeRoute",
+    summary:
+      "A safety-focused routing app that helps pedestrians and public transit users choose safer routes, built with a team of ten.",
+    description:
+      "Backend route computation in FastAPI paired with PostGIS for geospatial queries, so routes account for real safety data instead of just distance. My focus was the routing service and the geospatial query layer.",
+    stack: ["Python", "FastAPI", "PostgreSQL", "PostGIS", "React Native"],
+    features: [
+      "Geospatial routing queries via PostGIS",
+      "FastAPI backend for route computation",
+      "Safety-focused pedestrian and transit routing",
+      "Built in a ten-person team",
+    ],
+    github: undefined,
+    demo: undefined,
+  },
+  {
+    slug: "clearway",
+    title: "ClearWay",
+    summary:
+      "A road capacity booking platform built to explore distributed systems concepts in a real, multi-service setting.",
+    description:
+      "Designed and built with a team of five, applying distributed transactions, consensus, and event-driven messaging to keep booking state consistent across services under load.",
+    stack: [
+      "Distributed Systems",
+      "Sagas",
+      "Event-Driven Architecture",
+      "Consensus",
+      "Load Balancing",
+    ],
+    features: [
+      "Distributed transactions via the Saga pattern",
+      "Consensus and leader election",
+      "Event-driven messaging between services",
+      "Load balancing across services",
+    ],
+    github: undefined,
+    demo: undefined,
+  },
+  {
     slug: "super-resolution",
     title: "Image & Video Super-Resolution",
     summary:
       "A deep learning pipeline that upscales low quality images and video, restoring detail a simple resize would lose.",
     description:
-      "Built preprocessing and inference pipelines around a super-resolution model, with an eye on throughput as well as output quality, so batch video processing doesn't fall over on limited GPU memory.",
-    stack: ["Python", "PyTorch", "Computer vision", "Deep learning"],
+      "Trained a CNN-based super-resolution model in Keras and OpenCV, then built the inference pipeline around it with an eye on throughput as well as output quality, so batch video processing doesn't fall over on limited GPU memory.",
+    stack: ["Python", "Keras", "OpenCV", "Deep Learning"],
     features: [
-      "Real-time image upscaling",
+      "CNN-based image and video upscaling",
       "Batch video processing",
       "Multiple enhancement algorithms",
       "Quality-preserving inference",
     ],
     github: undefined,
+    demo: undefined,
+  },
+  {
+    slug: "msc-dissertation",
+    title: "Multi-Scale Contrastive Learning",
+    summary:
+      "MSc dissertation researching whether contrastive learning across multiple backbone depths improves few-shot image classification.",
+    description:
+      "Proposes Multi-Scale Contrastive Learning (MSCL), which applies the NT-Xent loss simultaneously at three ResNet-12 depths instead of only the final layer. The improvement doesn't come from training on multiple scales by itself, it comes from actually using those concatenated multi-scale features downstream at evaluation time.",
+    stack: [
+      "Python",
+      "Self-Supervised Learning",
+      "Contrastive Learning",
+      "Few-Shot Learning",
+    ],
+    features: [
+      "NT-Xent loss applied across three ResNet-12 depths",
+      "Evaluated on CIFAR-FS and miniImageNet",
+      "54.21% vs 48.69% SimCLR baseline on CIFAR-FS 1-shot",
+      "Statistically significant gains from multi-scale features at evaluation",
+    ],
+    status: "In progress",
+    github: "https://github.com/JaiNagle/msc-dissertation",
     demo: undefined,
   },
 ];
