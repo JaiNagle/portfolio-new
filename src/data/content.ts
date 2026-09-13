@@ -12,17 +12,41 @@ export const profile = {
 
 export const about = {
   paragraphs: [
-    "I work mostly in Python, building APIs and backend services, and I spend time on RedHat Linux keeping systems running and understanding how they fail.",
-    "I've also worked on machine learning projects, including an image and video super-resolution pipeline, which pushed me to get comfortable with the full path from a trained model to something that actually runs reliably.",
-    "I'm still early in my career and learning fast. Right now that means picking up more of the tooling around modern software teams: CI/CD, containerized deployments, and writing code that other people can read and maintain.",
+    "I'm a software engineer currently finishing an M.Sc. in Computer Science with an AI specialization at Trinity College Dublin. Before that I spent a few years shipping production code across machine vision, cloud infrastructure, and full-stack development.",
+    "At Pragati Switchgears I built Python-based machine vision models for automated quality inspection on production lines, along with the WPF desktop app operators used to act on what the model found. Before that, at Kellanova, I provisioned and maintained AWS infrastructure and worked with the data analytics team to cut cloud costs by auditing and rightsizing what we were running.",
+    "I'm Red Hat certified (RHCSA) and still spend most of my time in Python, whether that's an API, a training pipeline, or the Linux box it all runs on.",
   ],
   details: [
     { label: "Location", value: "Ireland" },
-    { label: "Focus", value: "Python · Backend · ML" },
+    { label: "Focus", value: "Python · ML · Systems" },
     { label: "Platform", value: "RedHat Linux" },
     { label: "Status", value: "Open to work" },
   ],
 };
+
+export type EducationEntry = {
+  institution: string;
+  degree: string;
+  dates: string;
+  location: string;
+  detail?: string;
+};
+
+export const education: EducationEntry[] = [
+  {
+    institution: "Trinity College Dublin",
+    degree: "M.Sc. Computer Science, AI specialization",
+    dates: "Expected Sep 2026",
+    location: "Dublin, Ireland",
+  },
+  {
+    institution:
+      "Mukesh Patel School of Technology Management and Engineering",
+    degree: "B.Tech, Computer Engineering",
+    dates: "Jun 2022",
+    location: "Mumbai, India",
+  },
+];
 
 export type SkillCategory = {
   category: string;
