@@ -61,11 +61,20 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
-				}
+				},
+				ink: 'hsl(var(--ink))',
+				paper: 'hsl(var(--paper))',
+				slate: 'hsl(var(--slate))',
+				line: 'hsl(var(--line))',
+				signal: 'hsl(var(--signal))',
 			},
 			fontFamily: {
 				sans: ['Inter', 'system-ui', 'sans-serif'],
-				mono: ['JetBrains Mono', 'Monaco', 'monospace'],
+				display: ['"Space Grotesk"', 'system-ui', 'sans-serif'],
+				mono: ['"JetBrains Mono"', 'Monaco', 'monospace'],
+			},
+			maxWidth: {
+				content: '72rem',
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
