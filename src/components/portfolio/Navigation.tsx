@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
 import { profile } from "@/data/content";
+import ThemeToggle from "@/components/portfolio/ThemeToggle";
 
 const navItems = [
   { label: "About", href: "#about" },
@@ -39,9 +40,11 @@ const Navigation = () => {
               e.preventDefault();
               window.scrollTo({ top: 0, behavior: "smooth" });
             }}
-            className="font-display text-lg font-semibold tracking-tight"
+            className="font-mono text-lg font-medium tracking-tight"
           >
-            {profile.name}
+            <span className="text-slate">&lt;</span>
+            JN
+            <span className="text-slate">/&gt;</span>
           </a>
 
           <nav className="hidden md:flex items-center gap-8">
@@ -54,21 +57,25 @@ const Navigation = () => {
                 {item.label}
               </button>
             ))}
+            <ThemeToggle />
             <a
               href={`mailto:${profile.email}`}
-              className="text-sm border border-line rounded-sm px-3 py-1.5 hover:border-ink transition-colors"
+              className="text-sm border border-line rounded-sm px-3 py-1.5 hover:border-foreground/40 transition-colors"
             >
               Say hello
             </a>
           </nav>
 
-          <button
-            className="md:hidden p-2 -mr-2"
-            onClick={() => setIsMenuOpen((v) => !v)}
-            aria-label={isMenuOpen ? "Close menu" : "Open menu"}
-          >
-            {isMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
-          </button>
+          <div className="flex items-center gap-2 md:hidden">
+            <ThemeToggle />
+            <button
+              className="p-2 -mr-2"
+              onClick={() => setIsMenuOpen((v) => !v)}
+              aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+            >
+              {isMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+            </button>
+          </div>
         </div>
       </div>
 

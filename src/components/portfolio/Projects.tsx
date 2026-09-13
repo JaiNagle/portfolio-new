@@ -13,13 +13,13 @@ const Projects = () => {
           {projects.map((project) => (
             <article
               key={project.slug}
-              className="bg-ink text-paper rounded-sm overflow-hidden"
+              className="bg-card border border-line rounded-sm overflow-hidden"
             >
-              <div className="flex items-center gap-2 px-5 py-3 border-b border-paper/10">
-                <span className="h-2.5 w-2.5 rounded-full bg-paper/20" />
-                <span className="h-2.5 w-2.5 rounded-full bg-paper/20" />
-                <span className="h-2.5 w-2.5 rounded-full bg-paper/20" />
-                <span className="ml-3 font-mono text-xs text-paper/50">
+              <div className="flex items-center gap-2 px-5 py-3 border-b border-line">
+                <span className="h-2.5 w-2.5 rounded-full bg-foreground/15" />
+                <span className="h-2.5 w-2.5 rounded-full bg-foreground/15" />
+                <span className="h-2.5 w-2.5 rounded-full bg-signal/60" />
+                <span className="ml-3 font-mono text-xs text-slate">
                   ~/projects/{project.slug}
                 </span>
               </div>
@@ -29,7 +29,7 @@ const Projects = () => {
                   <h3 className="font-display text-2xl md:text-3xl">
                     {project.title}
                   </h3>
-                  <p className="text-paper/70 leading-relaxed">
+                  <p className="text-foreground/70 leading-relaxed">
                     {project.description}
                   </p>
 
@@ -37,7 +37,7 @@ const Projects = () => {
                     {project.stack.map((tech) => (
                       <span
                         key={tech}
-                        className="font-mono text-xs text-paper/60 border border-paper/15 rounded-sm px-2 py-1"
+                        className="font-mono text-xs text-slate border border-line rounded-sm px-2 py-1"
                       >
                         {tech}
                       </span>
@@ -50,13 +50,13 @@ const Projects = () => {
                         href={project.github}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center gap-1.5 text-sm border-b border-paper/40 pb-0.5 hover:border-paper transition-colors"
+                        className="inline-flex items-center gap-1.5 text-sm border-b border-foreground/40 pb-0.5 hover:border-signal hover:text-signal transition-colors"
                       >
                         <Github className="h-4 w-4" />
                         Source
                       </a>
                     ) : (
-                      <span className="font-mono text-xs text-paper/40">
+                      <span className="font-mono text-xs text-slate">
                         source private
                       </span>
                     )}
@@ -65,7 +65,7 @@ const Projects = () => {
                         href={project.demo}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center gap-1.5 text-sm border-b border-paper/40 pb-0.5 hover:border-paper transition-colors"
+                        className="inline-flex items-center gap-1.5 text-sm border-b border-foreground/40 pb-0.5 hover:border-signal hover:text-signal transition-colors"
                       >
                         Live demo
                         <ArrowUpRight className="h-4 w-4" />
@@ -75,16 +75,16 @@ const Projects = () => {
                 </div>
 
                 <div className="lg:col-span-5">
-                  <p className="font-mono text-xs text-paper/40 mb-3">
+                  <p className="font-mono text-xs text-slate mb-3">
                     Key features
                   </p>
                   <ul className="space-y-2.5">
                     {project.features.map((feature) => (
                       <li
                         key={feature}
-                        className="flex items-start gap-2.5 text-sm text-paper/80"
+                        className="flex items-start gap-2.5 text-sm text-foreground/80"
                       >
-                        <span className="mt-2 h-1 w-1 rounded-full bg-paper/40 shrink-0" />
+                        <span className="mt-2 h-1 w-1 rounded-full bg-signal shrink-0" />
                         {feature}
                       </li>
                     ))}

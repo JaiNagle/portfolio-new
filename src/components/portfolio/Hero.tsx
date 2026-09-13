@@ -22,6 +22,12 @@ const Hero = () => {
             style={{ animationDelay: "60ms" }}
           >
             {profile.name}
+            <span
+              className="animate-cursor-blink text-signal ml-1 inline-block"
+              aria-hidden="true"
+            >
+              _
+            </span>
           </h1>
 
           <p
