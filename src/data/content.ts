@@ -32,19 +32,61 @@ export type SkillCategory = {
 export const skills: SkillCategory[] = [
   {
     category: "Languages",
-    items: ["Python", "TypeScript", "JavaScript", "SQL", "Bash"],
+    items: ["Python", "Java", "C#", "C++", "SQL", "JavaScript"],
   },
   {
-    category: "Backend & APIs",
-    items: ["FastAPI", "Django", "Flask", "REST", "PostgreSQL"],
+    category: "Backend & cloud",
+    items: ["FastAPI", "ASP.NET MVC", "REST APIs", "PostgreSQL", "AWS"],
   },
   {
     category: "Machine learning",
-    items: ["PyTorch", "scikit-learn", "pandas", "NumPy", "OpenCV"],
+    items: ["Keras", "OpenCV", "scikit-learn", "Computer vision"],
   },
   {
     category: "Tools & practices",
-    items: ["Git", "Docker", "GitHub Actions", "Linux", "Agile"],
+    items: ["Git", "Docker", "Kubernetes", "Linux (RHEL)", "Selenium"],
+  },
+];
+
+export type ExperienceEntry = {
+  company: string;
+  role: string;
+  dates: string;
+  location: string;
+  bullets: string[];
+};
+
+export const experience: ExperienceEntry[] = [
+  {
+    company: "Pragati Switchgears",
+    role: "Software Engineer",
+    dates: "Nov 2024 – Sep 2025",
+    location: "Vasai, India",
+    bullets: [
+      "Designed and trained Python-based machine vision models for automated component quality control on MSME production lines, replacing manual visual inspection",
+      "Built end-to-end WPF desktop applications for real-time defect detection, integrating image processing pipelines with an operator-facing feedback interface, owning the system from model to UI",
+    ],
+  },
+  {
+    company: "Kellanova (formerly Kellogg Company)",
+    role: "Associate Technical Analyst, Infrastructure Compute Team",
+    dates: "Jul 2022 – Sep 2024",
+    location: "Mumbai, India",
+    bullets: [
+      "Provisioned, configured, and maintained Linux servers on AWS (EC2, EBS, CloudFormation), managing infrastructure-as-code deployments and secure SSH-based access",
+      "Partnered with the Global Data Analytics team on cloud cost optimization: audited infrastructure for redundancy, decommissioned unused servers, and restructured archive storage",
+      "Built and deployed an internal Python and Excel self-assessment tool for the company's YODA development program, adopted organization-wide",
+    ],
+  },
+  {
+    company: "PMaps",
+    role: "Intern, Software Development",
+    dates: "Jun 2021 – Jun 2022",
+    location: "Thane, India",
+    bullets: [
+      "Developed employer-facing interfaces for a core platform rewrite using ASP.NET MVC, REST APIs, and MS-SQL, and shipped three new features in C# for the finance team's invoicing application",
+      "Designed and implemented a Selenium and Java test automation suite that replaced manual regression testing, removing a recurring bottleneck from the QA release cycle",
+    ],
   },
 ];
 
@@ -62,20 +104,26 @@ export type Project = {
 
 export const projects: Project[] = [
   {
-    slug: "saferoute",
-    title: "SafeRoute",
+    slug: "msc-dissertation",
+    title: "Multi-Scale Contrastive Learning",
     summary:
-      "A safety-focused routing app that helps pedestrians and public transit users choose safer routes, built with a team of ten.",
+      "MSc dissertation researching whether contrastive learning across multiple backbone depths improves few-shot image classification.",
     description:
-      "Backend route computation in FastAPI paired with PostGIS for geospatial queries, so routes account for real safety data instead of just distance. My focus was the routing service and the geospatial query layer.",
-    stack: ["Python", "FastAPI", "PostgreSQL", "PostGIS", "React Native"],
-    features: [
-      "Geospatial routing queries via PostGIS",
-      "FastAPI backend for route computation",
-      "Safety-focused pedestrian and transit routing",
-      "Built in a ten-person team",
+      "Proposes Multi-Scale Contrastive Learning (MSCL), which applies the NT-Xent loss simultaneously at three ResNet-12 depths instead of only the final layer. The improvement doesn't come from training on multiple scales by itself, it comes from actually using those concatenated multi-scale features downstream at evaluation time.",
+    stack: [
+      "Python",
+      "Self-Supervised Learning",
+      "Contrastive Learning",
+      "Few-Shot Learning",
     ],
-    github: undefined,
+    features: [
+      "NT-Xent loss applied across three ResNet-12 depths",
+      "Evaluated on CIFAR-FS and miniImageNet",
+      "54.21% vs 48.69% SimCLR baseline on CIFAR-FS 1-shot",
+      "Statistically significant gains from multi-scale features at evaluation",
+    ],
+    status: "In progress",
+    github: "https://github.com/JaiNagle/msc-dissertation",
     demo: undefined,
   },
   {
@@ -102,6 +150,23 @@ export const projects: Project[] = [
     demo: undefined,
   },
   {
+    slug: "saferoute",
+    title: "SafeRoute",
+    summary:
+      "A safety-focused routing app that helps pedestrians and public transit users choose safer routes, built with a team of ten.",
+    description:
+      "Backend route computation in FastAPI paired with PostGIS for geospatial queries, so routes account for real safety data instead of just distance. My focus was the routing service and the geospatial query layer.",
+    stack: ["Python", "FastAPI", "PostgreSQL", "PostGIS", "React Native"],
+    features: [
+      "Geospatial routing queries via PostGIS",
+      "FastAPI backend for route computation",
+      "Safety-focused pedestrian and transit routing",
+      "Built in a ten-person team",
+    ],
+    github: undefined,
+    demo: undefined,
+  },
+  {
     slug: "super-resolution",
     title: "Image & Video Super-Resolution",
     summary:
@@ -116,29 +181,6 @@ export const projects: Project[] = [
       "Quality-preserving inference",
     ],
     github: undefined,
-    demo: undefined,
-  },
-  {
-    slug: "msc-dissertation",
-    title: "Multi-Scale Contrastive Learning",
-    summary:
-      "MSc dissertation researching whether contrastive learning across multiple backbone depths improves few-shot image classification.",
-    description:
-      "Proposes Multi-Scale Contrastive Learning (MSCL), which applies the NT-Xent loss simultaneously at three ResNet-12 depths instead of only the final layer. The improvement doesn't come from training on multiple scales by itself, it comes from actually using those concatenated multi-scale features downstream at evaluation time.",
-    stack: [
-      "Python",
-      "Self-Supervised Learning",
-      "Contrastive Learning",
-      "Few-Shot Learning",
-    ],
-    features: [
-      "NT-Xent loss applied across three ResNet-12 depths",
-      "Evaluated on CIFAR-FS and miniImageNet",
-      "54.21% vs 48.69% SimCLR baseline on CIFAR-FS 1-shot",
-      "Statistically significant gains from multi-scale features at evaluation",
-    ],
-    status: "In progress",
-    github: "https://github.com/JaiNagle/msc-dissertation",
     demo: undefined,
   },
 ];
