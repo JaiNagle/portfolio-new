@@ -5,7 +5,7 @@ import { profile } from "@/data/content";
 const navItems = [
   { label: "About", href: "#about" },
   { label: "Skills", href: "#skills" },
-  { label: "Work", href: "#work" },
+  { label: "Projects", href: "#projects" },
   { label: "Contact", href: "#contact" },
 ];
 

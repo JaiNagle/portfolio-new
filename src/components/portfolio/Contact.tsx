@@ -46,11 +46,10 @@ const Contact = () => {
         </div>
       </div>
 
-      <footer className="max-w-content mx-auto px-6 md:px-10 mt-24 pt-8 border-t border-line flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
+      <footer className="max-w-content mx-auto px-6 md:px-10 mt-24 pt-8 border-t border-line">
         <p className="font-mono text-xs text-slate">
           © {new Date().getFullYear()} {profile.name}
         </p>
-        <p className="font-mono text-xs text-slate">Built with React & Tailwind</p>
       </footer>
     </section>
   );

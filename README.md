@@ -1,4 +1,4 @@
-# Jai Nagle — Portfolio
+# Jai Nagle - Portfolio
 
 Personal portfolio site.
 
@@ -18,7 +18,7 @@ npm run dev
 
 ## Content
 
-Page copy — bio, skills, projects, contact details — lives in
+Page copy (bio, skills, projects, contact details) lives in
 [`src/data/content.ts`](src/data/content.ts). Edit that file to update the
 site; no component changes needed for text or data changes.
 

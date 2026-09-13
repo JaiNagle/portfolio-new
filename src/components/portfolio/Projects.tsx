@@ -3,10 +3,10 @@ import { projects } from "@/data/content";
 
 const Projects = () => {
   return (
-    <section id="work" className="py-20 md:py-28 border-t border-line">
+    <section id="projects" className="py-20 md:py-28 border-t border-line">
       <div className="max-w-content mx-auto px-6 md:px-10">
         <h2 className="font-display text-3xl md:text-4xl font-semibold tracking-tight mb-12">
-          Selected work
+          Projects
         </h2>
 
         <div className="space-y-10">
@@ -96,7 +96,7 @@ const Projects = () => {
         </div>
 
         <p className="mt-8 text-sm text-slate">
-          More case studies are on the way — check back soon.
+          More projects are on the way, check back soon.
         </p>
       </div>
     </section>
