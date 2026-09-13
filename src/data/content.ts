@@ -12,7 +12,7 @@ export const profile = {
 
 export const about = {
   paragraphs: [
-    "I'm a software engineer currently finishing an M.Sc. in Computer Science with an AI specialization at Trinity College Dublin. Before that I spent a few years shipping production code across machine vision, cloud infrastructure, and full-stack development.",
+    "I'm a software engineer currently finishing an M.Sc. in Computer Science at Trinity College Dublin. Before that I spent a few years shipping production code across machine vision, cloud infrastructure, and full-stack development.",
     "At Pragati Switchgears I built Python-based machine vision models for automated quality inspection on production lines, along with the WPF desktop app operators used to act on what the model found. Before that, at Kellanova, I provisioned and maintained AWS infrastructure and worked with the data analytics team to cut cloud costs by auditing and rightsizing what we were running.",
     "I'm Red Hat certified (RHCSA) and still spend most of my time in Python, whether that's an API, a training pipeline, or the Linux box it all runs on.",
   ],
@@ -35,7 +35,7 @@ export type EducationEntry = {
 export const education: EducationEntry[] = [
   {
     institution: "Trinity College Dublin",
-    degree: "M.Sc. Computer Science, AI specialization",
+    degree: "M.Sc. Computer Science",
     dates: "Expected Sep 2026",
     location: "Dublin, Ireland",
   },

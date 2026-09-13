@@ -1,4 +1,4 @@
-import { about, education } from "@/data/content";
+import { about } from "@/data/content";
 
 const About = () => {
   return (
@@ -33,23 +33,6 @@ const About = () => {
                 </div>
               ))}
             </dl>
-
-            <p className="font-mono text-xs text-slate mt-8 mb-3">
-              Education
-            </p>
-            <div className="border border-line rounded-sm divide-y divide-line">
-              {education.map((edu) => (
-                <div key={edu.institution} className="px-5 py-4">
-                  <div className="flex items-baseline justify-between gap-4">
-                    <p className="text-sm font-medium">{edu.institution}</p>
-                    <p className="font-mono text-xs text-slate shrink-0">
-                      {edu.dates}
-                    </p>
-                  </div>
-                  <p className="text-sm text-slate mt-0.5">{edu.degree}</p>
-                </div>
-              ))}
-            </div>
           </div>
         </div>
       </div>
