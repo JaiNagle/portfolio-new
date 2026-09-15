@@ -36,7 +36,7 @@ export const education: EducationEntry[] = [
   {
     institution: "Trinity College Dublin",
     degree: "M.Sc. Computer Science",
-    dates: "Expected Sep 2026",
+    dates: "Sep 2026",
     location: "Dublin, Ireland",
   },
   {
@@ -146,7 +146,6 @@ export const projects: Project[] = [
       "54.21% vs 48.69% SimCLR baseline on CIFAR-FS 1-shot",
       "Statistically significant gains from multi-scale features at evaluation",
     ],
-    status: "In progress",
     github: "https://github.com/JaiNagle/msc-dissertation",
     demo: undefined,
   },
