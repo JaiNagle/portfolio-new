@@ -19,7 +19,6 @@ export const about = {
   details: [
     { label: "Location", value: "Ireland" },
     { label: "Focus", value: "Python · ML · Systems" },
-    { label: "Platform", value: "RedHat Linux" },
     { label: "Status", value: "Open to work" },
   ],
 };
@@ -88,7 +87,6 @@ export type ExperienceEntry = {
   company: string;
   role: string;
   dates: string;
-  location: string;
   bullets: string[];
 };
 
@@ -97,7 +95,6 @@ export const experience: ExperienceEntry[] = [
     company: "Pragati Switchgears",
     role: "Software Engineer",
     dates: "Nov 2024 – Sep 2025",
-    location: "Vasai, India",
     bullets: [
       "Built machine vision inspection models in Python for automated component quality control, cutting manual inspection time by 60% across production lines",
       "Trained and validated models on 5,000+ labelled component images, reaching 95% defect-detection accuracy with under 100ms inference per part",
@@ -108,7 +105,6 @@ export const experience: ExperienceEntry[] = [
     company: "Kellanova (formerly Kellogg Company)",
     role: "Associate Technical Analyst, Infrastructure Compute Team",
     dates: "Jul 2022 – Sep 2024",
-    location: "Mumbai, India",
     bullets: [
       "Provisioned and managed 20+ Linux servers on AWS (EC2, EBS, CloudFormation), handling configuration and access over SSH while sustaining 99.9% availability",
       "Partnered with the Global Data Analytics team to cut AWS spend by 10%, auditing redundant infrastructure and decommissioning 20+ unused servers",
@@ -119,7 +115,6 @@ export const experience: ExperienceEntry[] = [
     company: "PMaps",
     role: "Software Developer, Intern",
     dates: "Jun 2021 – Jun 2022",
-    location: "Thane, India",
     bullets: [
       "Built 3+ customer-facing interfaces for a core platform rewrite using ASP.NET MVC, REST APIs, and MS-SQL",
       "Extended the invoicing app in C# with three new features for the finance team, reducing manual invoice handling time by 50%",

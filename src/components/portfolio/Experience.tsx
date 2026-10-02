@@ -16,9 +16,6 @@ const Experience = () => {
             >
               <div className="md:col-span-3">
                 <p className="font-mono text-xs text-slate">{entry.dates}</p>
-                <p className="font-mono text-xs text-slate mt-1">
-                  {entry.location}
-                </p>
               </div>
 
               <div className="md:col-span-9 space-y-4">
