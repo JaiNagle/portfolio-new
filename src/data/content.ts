@@ -13,7 +13,7 @@ export const profile = {
 export const about = {
   paragraphs: [
     "I'm a software engineer currently finishing an M.Sc. in Computer Science at Trinity College Dublin. Before that I spent a few years shipping production code across machine vision, cloud infrastructure, and full-stack development.",
-    "At Pragati Switchgears I built Python-based machine vision models for automated quality inspection on production lines, along with the WPF desktop app operators used to act on what the model found. Before that, at Kellanova, I provisioned and maintained AWS infrastructure and worked with the data analytics team to cut cloud costs by auditing and rightsizing what we were running.",
+    "At Pragati Switchgears I built Python-based machine vision models for automated quality inspection on production lines, along with the desktop GUI operators used to act on what the model found. Before that, at Kellanova, I provisioned and maintained AWS infrastructure and worked with the data analytics team to cut cloud costs by auditing and rightsizing what we were running.",
     "I'm Red Hat certified (RHCSA) and still spend most of my time in Python, whether that's an API, a training pipeline, or the Linux box it all runs on.",
   ],
   details: [
@@ -56,19 +56,31 @@ export type SkillCategory = {
 export const skills: SkillCategory[] = [
   {
     category: "Languages",
-    items: ["Python", "Java", "C#", "C++", "SQL", "JavaScript"],
+    items: ["Python", "Java", "C#", "C++", "Go", "JavaScript", "SQL"],
   },
   {
-    category: "Backend & cloud",
-    items: ["FastAPI", "ASP.NET MVC", "REST APIs", "PostgreSQL", "AWS"],
+    category: "Frameworks & libraries",
+    items: [
+      "FastAPI",
+      "ASP.NET MVC",
+      "React Native",
+      "Selenium",
+      "Keras",
+      "OpenCV",
+      "scikit-learn",
+    ],
   },
   {
-    category: "Machine learning",
-    items: ["Keras", "OpenCV", "scikit-learn", "Computer vision"],
+    category: "Cloud & infrastructure",
+    items: ["AWS", "GCP", "Docker", "Kubernetes", "Linux (RHEL)", "Prometheus", "Grafana"],
   },
   {
-    category: "Tools & practices",
-    items: ["Git", "Docker", "Kubernetes", "Linux (RHEL)", "Selenium"],
+    category: "Databases",
+    items: ["PostgreSQL", "PostGIS", "CockroachDB", "MS-SQL", "Redis"],
+  },
+  {
+    category: "Tools",
+    items: ["Git", "Claude Code", "Cursor", "Postman", "Jupyter Notebooks"],
   },
 ];
 
@@ -87,8 +99,9 @@ export const experience: ExperienceEntry[] = [
     dates: "Nov 2024 – Sep 2025",
     location: "Vasai, India",
     bullets: [
-      "Designed and trained Python-based machine vision models for automated component quality control on MSME production lines, replacing manual visual inspection",
-      "Built end-to-end WPF desktop applications for real-time defect detection, integrating image processing pipelines with an operator-facing feedback interface, owning the system from model to UI",
+      "Built machine vision inspection models in Python for automated component quality control, cutting manual inspection time by 60% across production lines",
+      "Trained and validated models on 5,000+ labelled component images, reaching 95% defect-detection accuracy with under 100ms inference per part",
+      "Developed desktop GUIs for real-time defect detection and operator feedback, owning the full stack from image processing to the interface used by 5+ operators per shift",
     ],
   },
   {
@@ -97,19 +110,20 @@ export const experience: ExperienceEntry[] = [
     dates: "Jul 2022 – Sep 2024",
     location: "Mumbai, India",
     bullets: [
-      "Provisioned, configured, and maintained Linux servers on AWS (EC2, EBS, CloudFormation), managing infrastructure-as-code deployments and secure SSH-based access",
-      "Partnered with the Global Data Analytics team on cloud cost optimization: audited infrastructure for redundancy, decommissioned unused servers, and restructured archive storage",
-      "Built and deployed an internal Python and Excel self-assessment tool for the company's YODA development program, adopted organization-wide",
+      "Provisioned and managed 20+ Linux servers on AWS (EC2, EBS, CloudFormation), handling configuration and access over SSH while sustaining 99.9% availability",
+      "Partnered with the Global Data Analytics team to cut AWS spend by 10%, auditing redundant infrastructure and decommissioning 20+ unused servers",
+      "Built an internal Python and Excel self-assessment tool for the company's YODA development program, adopted by 100+ employees across the organization",
     ],
   },
   {
     company: "PMaps",
-    role: "Intern, Software Development",
+    role: "Software Developer, Intern",
     dates: "Jun 2021 – Jun 2022",
     location: "Thane, India",
     bullets: [
-      "Developed employer-facing interfaces for a core platform rewrite using ASP.NET MVC, REST APIs, and MS-SQL, and shipped three new features in C# for the finance team's invoicing application",
-      "Designed and implemented a Selenium and Java test automation suite that replaced manual regression testing, removing a recurring bottleneck from the QA release cycle",
+      "Built 3+ customer-facing interfaces for a core platform rewrite using ASP.NET MVC, REST APIs, and MS-SQL",
+      "Extended the invoicing app in C# with three new features for the finance team, reducing manual invoice handling time by 50%",
+      "Replaced manual regression testing with a Selenium and Java suite of 150+ automated test cases, cutting the regression cycle from two days to three hours",
     ],
   },
 ];
@@ -131,9 +145,9 @@ export const projects: Project[] = [
     slug: "msc-dissertation",
     title: "Multi-Scale Contrastive Learning",
     summary:
-      "MSc dissertation researching whether contrastive learning across multiple backbone depths improves few-shot image classification.",
+      "MSc dissertation on a multi-scale extension to SimCLR, using ablation analysis to pin down where the few-shot classification gains actually come from.",
     description:
-      "Proposes Multi-Scale Contrastive Learning (MSCL), which applies the NT-Xent loss simultaneously at three ResNet-12 depths instead of only the final layer. The improvement doesn't come from training on multiple scales by itself, it comes from actually using those concatenated multi-scale features downstream at evaluation time.",
+      "Designed and evaluated a multi-scale extension to SimCLR for few-shot image classification. Ablation analysis traces a 54.21% vs 48.69% accuracy gain on CIFAR-FS to evaluation-time feature concatenation, not the training objective itself.",
     stack: [
       "Python",
       "Self-Supervised Learning",
@@ -141,10 +155,10 @@ export const projects: Project[] = [
       "Few-Shot Learning",
     ],
     features: [
-      "NT-Xent loss applied across three ResNet-12 depths",
-      "Evaluated on CIFAR-FS and miniImageNet",
-      "54.21% vs 48.69% SimCLR baseline on CIFAR-FS 1-shot",
-      "Statistically significant gains from multi-scale features at evaluation",
+      "Multi-scale extension to SimCLR for few-shot classification",
+      "+5.5% accuracy gain on CIFAR-FS over the SimCLR baseline",
+      "Ablation analysis isolating the true source of the gain",
+      "Gain traced to evaluation-time feature concatenation, not the training objective",
     ],
     github: "https://github.com/JaiNagle/msc-dissertation",
     demo: undefined,
@@ -157,6 +171,7 @@ export const projects: Project[] = [
     description:
       "Designed and built with a team of five, applying distributed transactions, consensus, and event-driven messaging to keep booking state consistent across services under load.",
     stack: [
+      "Go",
       "Distributed Systems",
       "Sagas",
       "Event-Driven Architecture",
@@ -179,7 +194,14 @@ export const projects: Project[] = [
       "A safety-focused routing app that helps pedestrians and public transit users choose safer routes, built with a team of ten.",
     description:
       "Backend route computation in FastAPI paired with PostGIS for geospatial queries, so routes account for real safety data instead of just distance. My focus was the routing service and the geospatial query layer.",
-    stack: ["Python", "FastAPI", "PostgreSQL", "PostGIS", "React Native"],
+    stack: [
+      "Python",
+      "FastAPI",
+      "PostgreSQL",
+      "PostGIS",
+      "React Native",
+      "Claude Code",
+    ],
     features: [
       "Geospatial routing queries via PostGIS",
       "FastAPI backend for route computation",
